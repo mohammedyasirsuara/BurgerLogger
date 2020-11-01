@@ -9,11 +9,11 @@ app.use(express.static('public'))
 
 router.get('/', function(req, res) {
     burger.selectAll(function(data) {
-        var handleBarObject = {
+        var burgerObject = {
             burgers: data
         }
-        console.log(handleBarObject)
-        res.render('index', handleBarObject)
+        console.log(burgerObject)
+        res.render('index', burgerObject)
     })
 })
 
